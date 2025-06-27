@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recommender</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-4">
+    <div class="container">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">
+                Food Recommender App
+            </h1>
+            <p class="text-gray-600">
+                Get a personalized food recommendation based on your mood, age, and time of day.
+            </p>
+        </header>
+
+        <!-- Mood Selection -->
+        <div class="input-section">
+            <h3>How are you feeling?</h3>
+            <div class="radio-group">
+                <input type="radio" id="moodHappy" name="mood" value="happy" class="radio-input">
+                <label for="moodHappy" class="radio-label">😊 Happy</label>
+                <input type="radio" id="moodSad" name="mood" value="sad" class="radio-input">
+                <label for="moodSad" class="radio-label">😔 Sad</label>
+            </div>
+        </div>
+
+        <!-- Age Group Selection -->
+        <div class="input-section">
+            <h3>What is your age group?</h3>
+            <div class="radio-group">
+                <input type="radio" id="ageYoung" name="age" value="young" class="radio-input">
+                <label for="ageYoung" class="radio-label">👦 Young (15-30)</label>
+                <input type="radio" id="ageMiddle" name="age" value="middle" class="radio-input">
+                <label for="ageMiddle" class="radio-label">👨 Middle-aged (30-50)</label>
+            </div>
+        </div>
+
+        <!-- Time of Day Selection -->
+        <div class="input-section">
+            <h3>What time of day is it?</h3>
+            <div class="radio-group">
+                <input type="radio" id="timeMorning" name="time" value="morning" class="radio-input">
+                <label for="timeMorning" class="radio-label">☀️ Morning</label>
+                <input type="radio" id="timeEvening" name="time" value="evening" class="radio-input">
+                <label for="timeEvening" class="radio-label">🌙 Evening</label>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+            <button id="submitBtn" class="button-primary">
+                Submit
+            </button>
+            <button id="resetBtn" class="button-secondary">
+                Reset Selections
+            </button>
+        </div>
+
+        <!-- Recommendation Output -->
+        <div id="recommendationOutput" class="recommendation-output">
+            Your delicious recommendation will appear here!
+        </div>
+
+        <!-- Recommendation History Section -->
+        <div class="history-section">
+            <h3>Your Recommendation History</h3>
+            <ul id="recommendationHistoryList" class="history-list">
+                <li class="empty-message">No recommendations yet. Get started!</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Custom Modal for Error Messages -->
+    <div id="errorModalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <h4 id="modalTitle">Error!</h4>
+            <p id="modalMessage">Please make sure to select an option for Mood, Age Group, and Time of Day.</p>
+            <button id="modalCloseBtn" class="modal-close-button">Got It!</button>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="aboutModalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <h4 class="modal-about-title">About This App</h4>
+            <p>This is a simple food recommendation system designed based on your mood, age group, and the time of day. It aims to provide a quick suggestion for your next meal or drink.</p>
+            <p class="text-sm text-gray-500 mt-4">Developed using HTML, CSS (Tailwind CSS), and JavaScript.</p>
+            <button id="aboutCloseBtn" class="modal-close-button">Close</button>
+        </div>
+    </div>
+
+    <!-- About Button (fixed to bottom right) -->
+    <button id="aboutBtn" class="about-button">?</button>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

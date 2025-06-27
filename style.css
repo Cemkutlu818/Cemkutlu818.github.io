@@ -1,0 +1,369 @@
+/* General body styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8; /* Light blue-gray background */
+    margin: 0;
+}
+
+/* Main container styles */
+.container {
+    max-width: 900px; /* Increased max-width for more content */
+    width: 90%; /* Fluid width for responsiveness */
+    margin: 2rem auto; /* Center the container */
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Header styles */
+header h1 {
+    font-weight: 700;
+    color: #2d3748;
+}
+header p {
+    color: #4a5568;
+}
+
+/* Input section styles */
+.input-section {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #e2e8f0; /* Light border */
+    border-radius: 8px;
+    background-color: #fbfdff; /* Slightly lighter background for sections */
+}
+
+/* Input section heading styles */
+.input-section h3 {
+    font-weight: 600; /* Semi-bold */
+    color: #2d3748; /* Darker text */
+    margin-bottom: 1rem;
+    text-align: center; /* Center section titles */
+}
+
+/* Radio group layout */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 1rem; /* Space between radio buttons */
+    justify-content: center; /* Center radio buttons */
+}
+
+/* Radio button label styles */
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.75rem 1.25rem;
+    border-radius: 20px; /* Pill-shaped buttons */
+    border: 2px solid #a0aec0; /* Gray border */
+    transition: all 0.2s ease-in-out;
+    user-select: none; /* Prevent text selection */
+    font-weight: 500;
+}
+
+/* Radio button label hover effect */
+.radio-label:hover {
+    background-color: #edf2f7; /* Lighter hover background */
+    border-color: #4299e1; /* Blue border on hover */
+}
+
+/* Styles for checked radio buttons */
+.radio-input:checked + .radio-label {
+    background-color: #4299e1; /* Blue background when checked */
+    color: #ffffff; /* White text when checked */
+    border-color: #2b6cb0; /* Darker blue border when checked */
+    box-shadow: 0 4px 8px rgba(66, 153, 225, 0.3); /* Soft shadow when checked */
+}
+
+/* Hide default radio input */
+.radio-input {
+    display: none;
+}
+
+/* Button group for action buttons */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Space between buttons */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Primary button styles */
+.button-primary {
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #4299e1, #2b6cb0); /* Gradient background */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 30px; /* More rounded pill shape */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    transition: all 0.3s ease;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Letter spacing */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Primary button hover effect */
+.button-primary:hover {
+    background: linear-gradient(135deg, #2b6cb0, #4299e1); /* Reverse gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Primary button active state */
+.button-primary:active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary button styles (e.g., Reset) */
+.button-secondary {
+    padding: 1rem 2.5rem;
+    background-color: #a0aec0; /* Gray background */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+/* Secondary button hover effect */
+.button-secondary:hover {
+    background-color: #718096; /* Darker gray on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary button active state */
+.button-secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Recommendation output area styles */
+.recommendation-output {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #e0f2f7; /* Light blue output background */
+    border-radius: 10px;
+    border: 1px solid #90cdf4; /* Blue border */
+    text-align: center;
+    min-height: 80px; /* Minimum height for consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem; /* Larger font size */
+    font-weight: 700; /* Bold */
+    color: #2c5282; /* Dark blue text */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Loading state for recommendation output */
+.recommendation-output.loading {
+    background-color: #faf089; /* Yellow for loading */
+    border-color: #ecc94b;
+    color: #744210;
+}
+
+/* Error state for recommendation output (used by modal, not direct output now) */
+.recommendation-output.error {
+    background-color: #fed7d7; /* Red for error */
+    border-color: #fc8181;
+    color: #c53030;
+}
+
+/* History section styles */
+.history-section {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.history-section h3 {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px; /* Max height for scrollable history */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #fdfdff;
+}
+
+.history-list li {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #edf2f7;
+    color: #4a5568;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.history-list li:last-child {
+    border-bottom: none;
+}
+
+.history-list li .timestamp {
+    font-size: 0.8rem;
+    color: #718096;
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+.history-list .empty-message {
+    text-align: center;
+    color: #718096;
+    padding: 1rem;
+    font-style: italic;
+}
+
+
+/* Modal overlay styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Make modal overlay visible */
+.modal-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal content box styles */
+.modal-content {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    transform: translateY(-50px); /* Start slightly up */
+    transition: transform 0.3s ease;
+    position: relative; /* For modal close button positioning if needed */
+}
+
+/* Modal content animation when visible */
+.modal-overlay.visible .modal-content {
+    transform: translateY(0); /* Slide down into place */
+}
+
+/* Modal title styles */
+.modal-content h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e53e3e; /* Red for error messages */
+    margin-bottom: 1rem;
+}
+
+.modal-content .modal-about-title {
+    color: #2c5282; /* Blue for about title */
+}
+
+/* Modal message text styles */
+.modal-content p {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+}
+
+/* Modal close button styles */
+.modal-close-button {
+    background-color: #4299e1;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+/* Modal close button hover effect */
+.modal-close-button:hover {
+    background-color: #2b6cb0;
+}
+
+/* About button (fixed to bottom right) */
+.about-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #63b3ed; /* Light blue */
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Circular */
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    z-index: 999;
+}
+
+.about-button:hover {
+    background-color: #4299e1; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+.about-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+    .container {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 1rem;
+    }
+    .button-primary, .button-secondary {
+        width: 100%; /* Full width buttons */
+    }
+    .radio-label {
+        width: 100%; /* Full width radio labels for easier tapping */
+        justify-content: center; /* Center text within the full-width label */
+    }
+}
